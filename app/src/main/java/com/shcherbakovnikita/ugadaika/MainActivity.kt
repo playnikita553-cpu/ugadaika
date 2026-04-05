@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity()
     private  var max = 25
     private var min = 1
     private var popitki = -1
-    private var maxPopitki = 5
+    private var maxPopitki = 6
     private var c = 0
 
     override fun onCreate(savedInstanceState: Bundle?)
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity()
         vvod.text.toString()
         vvod.setHint("Введите число от $min, до $max")
         binding.textResult.setText("")
-        binding.popitki.setText("$popitki")
+        binding.popitki.setText("Попыток: $popitki")
         c = randomChislo()
         binding.imagee.visibility = View.INVISIBLE
         binding.newGame.visibility = View.INVISIBLE
@@ -123,7 +123,7 @@ class MainActivity : AppCompatActivity()
         binding.newGame.visibility = View.VISIBLE
 
 
-        binding.textResult.setText("Поражение:[")
+        binding.textResult.setText("Поражение:[ (правильное число было: ${randomChislo()})")
 
         binding.imagee.setImageResource(R.drawable.lose)
 
