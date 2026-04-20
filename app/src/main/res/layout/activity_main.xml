@@ -1,53 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
- xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
 
-    <TextView
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#9C27B0"  />
+
+        <TextView
         android:id="@+id/popitki"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="попыток 5"
+        android:text="@string/popitki"
         android:textSize="25sp"
          />
-    <EditText
+        <EditText
         android:id="@+id/vvodd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:fontFamily="monospace"
-        android:hint="Введите число от 1 до 25"
+        android:hint="@string/vvod_chisla"
         android:inputType="number"
         />
-    <TextView
+        <TextView
         android:id="@+id/textResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="italic"
-        android:text="Победа:]"
+        android:text="@string/resultt"
         android:fontFamily="monospace"
         android:textSize="25sp"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         />
-    <Button
+        <Button
         android:id="@+id/proverka"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Проверить"
+        android:text="@string/proverka"
         android:textSize="25sp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="40dp"
         android:textStyle="italic"
         />
-    <ImageView
+        <ImageView
         android:id="@+id/imagee"
         android:layout_width="300dp"
         android:layout_height="300dp"
@@ -56,13 +61,13 @@
         android:visibility="invisible"
         android:src="@drawable/win"
         />
-    <Button
+        <Button
         android:id="@+id/newGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:layout_gravity="center"
-        android:text="Начать снова"
+        android:text="@string/start_again"
         android:textStyle="italic"
         android:textSize="30sp"
         />
