@@ -5,13 +5,4 @@
     <string name="resultt">Победа:]</string>
     <string name="proverka">Проверить</string>
     <string name="start_again">Начать снова</string>
-    <string name="settings_title">Настройки</string>
-    <string name="settings_popitki_label">Количество попыток</string>
-    <string name="settings_popitki_hint">Введите количество попыток</string>
-    <string name="settings_max_number_label">Максимальное число</string>
-    <string name="settings_max_number_hint">Введите максимальное число</string>
-    <string name="settings_save">Сохранить</string>
-    <string name="settings_saved">Настройки сохранены</string>
-    <string name="settings_error_popitki">Количество попыток должно быть не менее 1</string>
-    <string name="settings_error_max_number">Максимальное число должно быть не менее 2</string>
 </resources>
