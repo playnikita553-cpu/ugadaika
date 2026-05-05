@@ -1,60 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsActivity"
-    android:orientation="vertical"
-    android:padding="24dp">
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarSettings"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:layout_marginStart="-24dp"
-        android:layout_marginEnd="-24dp"
-        android:layout_marginTop="-24dp"
-        android:background="#9C27B0"
-        android:titleTextColor="@android:color/white" />
+    tools:context=".SettingsActivity">
 
     <TextView
+        android:id="@+id/zagolovok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/settings_popitki_label"
-        android:textSize="20sp"
-        android:layout_marginTop="32dp" />
+        android:text="Настройки"
+        android:textSize="30sp"
+        android:fontFamily="monospace"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <EditText
-        android:id="@+id/editPopitki"
-        android:layout_width="match_parent"
+        android:id="@+id/maxChislo"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:ems="10"
         android:inputType="number"
-        android:hint="@string/settings_popitki_hint"
-        android:layout_marginTop="8dp" />
+        android:fontFamily="monospace"
+        android:layout_marginTop="100dp"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintTop_toBottomOf="@id/zagolovok"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/textMax"
+        />
 
     <TextView
+        android:id="@+id/textMax"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/settings_max_number_label"
-        android:textSize="20sp"
-        android:layout_marginTop="24dp" />
+        android:text="Макс. число"
+        android:fontFamily="monospace"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintTop_toTopOf="@id/maxChislo"
+        app:layout_constraintBottom_toBottomOf="@id/maxChislo"
+        app:layout_constraintStart_toEndOf="@id/maxChislo"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
     <EditText
-        android:id="@+id/editMaxNumber"
-        android:layout_width="match_parent"
+        android:id="@+id/kolvoPopitok"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:ems="10"
         android:inputType="number"
-        android:hint="@string/settings_max_number_hint"
-        android:layout_marginTop="8dp" />
+        android:fontFamily="monospace"
+        android:layout_marginTop="100dp"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintTop_toBottomOf="@id/maxChislo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/textPopitki"
+        />
+
+    <TextView
+        android:id="@+id/textPopitki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Кол-во попыток"
+        android:fontFamily="monospace"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintTop_toTopOf="@id/kolvoPopitok"
+        app:layout_constraintBottom_toBottomOf="@id/kolvoPopitok"
+        app:layout_constraintStart_toEndOf="@id/kolvoPopitok"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
     <Button
-        android:id="@+id/btnSave"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnSohranit"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/settings_save"
-        android:textSize="20sp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="32dp" />
+        android:text="Сохранить и выйти"
+        android:fontFamily="monospace"
+        android:layout_marginTop="100dp"
+        android:layout_marginHorizontal="30dp"
+        app:layout_constraintTop_toBottomOf="@id/kolvoPopitok"
+        />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
