@@ -16,35 +16,56 @@ class SettingsActivity : AppCompatActivity()
         binding = ActivitySettingsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val args = intent.extras
+        
         var maxChislo = args?.getInt("MaxChislo") ?: 25
+
+        
         var kolvoPopitok = args?.getInt("KolvoPopitok") ?: 6
 
+        
+        val args = intent.extras
+
+        
         obnovitPolya(maxChislo, kolvoPopitok)
 
-        binding.btnSohranit.setOnClickListener()
-        {
-            if (binding.maxChislo.text.toString() != "" && binding.kolvoPopitok.text.toString() != "")
-            {
-                maxChislo = binding.maxChislo.text.toString().toInt()
+        binding.btnSohranit.setOnClickListener(){
+            if (binding.maxChislo.text.toString() != "" && binding.kolvoPopitok.text.toString() != ""){
+
                 kolvoPopitok = binding.kolvoPopitok.text.toString().toInt()
 
+                
+                maxChislo = binding.maxChislo.text.toString().toInt()
+
+                
+
                 val intent = Intent()
+
+                
                 intent.putExtra("MaxChislo", maxChislo)
+
+                
                 intent.putExtra("KolvoPopitok", kolvoPopitok)
+
+                
                 setResult(RESULT_OK, intent)
+
+                
                 finish()
             }
-            else
-            {
+            else{
                 Toast.makeText(this, "Не оставляйте поля пустыми!!!", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
-    private fun obnovitPolya(maxChislo: Int, kolvoPopitok: Int)
-    {
-        binding.maxChislo.setText(maxChislo.toString())
-        binding.kolvoPopitok.setText(kolvoPopitok.toString())
-    }
+        private fun obnovitPolya(maxChislo: Int, kolvoPopitok: Int){
+
+            
+            binding.maxChislo.setText(maxChislo.toString())
+
+            
+            binding.kolvoPopitok.setText(kolvoPopitok.toString())
+
+            
+        }
 }
