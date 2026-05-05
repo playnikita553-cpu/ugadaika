@@ -7,82 +7,156 @@
     android:layout_height="match_parent"
     tools:context=".SettingsActivity">
 
+
     <TextView
         android:id="@+id/zagolovok"
+        
         android:layout_width="wrap_content"
+        
         android:layout_height="wrap_content"
+        
         android:text="Настройки"
-        android:textSize="30sp"
+        
+        android:textSize="28sp"
+        
         android:fontFamily="monospace"
-        android:layout_marginTop="30dp"
+        
+        android:layout_marginTop="35dp"
+        
         app:layout_constraintStart_toStartOf="parent"
+        
         app:layout_constraintEnd_toEndOf="parent"
+        
         app:layout_constraintTop_toTopOf="parent"
         />
 
+
     <EditText
         android:id="@+id/maxChislo"
+        
         android:layout_width="wrap_content"
+        
         android:layout_height="wrap_content"
+        
         android:ems="10"
+        
         android:inputType="number"
+        
         android:fontFamily="monospace"
-        android:layout_marginTop="100dp"
-        android:layout_marginHorizontal="10dp"
+        
+        android:layout_marginTop="90dp"
+        
+        android:layout_marginHorizontal="12dp"
+        
         app:layout_constraintTop_toBottomOf="@id/zagolovok"
+        
         app:layout_constraintStart_toStartOf="parent"
+        
         app:layout_constraintEnd_toStartOf="@id/textMax"
+        
         />
 
     <TextView
         android:id="@+id/textMax"
+        
         android:layout_width="wrap_content"
+        
         android:layout_height="wrap_content"
+        
         android:text="Макс. число"
+        
+        android:textSize="16sp"
+        
         android:fontFamily="monospace"
-        android:layout_marginHorizontal="10dp"
+        
+        android:layout_marginHorizontal="12dp"
+        
         app:layout_constraintTop_toTopOf="@id/maxChislo"
+        
         app:layout_constraintBottom_toBottomOf="@id/maxChislo"
+        
         app:layout_constraintStart_toEndOf="@id/maxChislo"
+        
         app:layout_constraintEnd_toEndOf="parent"
+        
         />
+
 
     <EditText
         android:id="@+id/kolvoPopitok"
+        
         android:layout_width="wrap_content"
+        
         android:layout_height="wrap_content"
+        
         android:ems="10"
+        
         android:inputType="number"
+        
         android:fontFamily="monospace"
-        android:layout_marginTop="100dp"
-        android:layout_marginHorizontal="10dp"
+        
+        android:layout_marginTop="80dp"
+        
+        android:layout_marginHorizontal="12dp"
+        
         app:layout_constraintTop_toBottomOf="@id/maxChislo"
+        
         app:layout_constraintStart_toStartOf="parent"
+        
         app:layout_constraintEnd_toStartOf="@id/textPopitki"
+        
         />
 
     <TextView
         android:id="@+id/textPopitki"
+        
         android:layout_width="wrap_content"
+        
         android:layout_height="wrap_content"
+        
         android:text="Кол-во попыток"
+        
+        android:textSize="16sp"
+        
         android:fontFamily="monospace"
-        android:layout_marginHorizontal="10dp"
+        
+        android:layout_marginHorizontal="12dp"
+        
         app:layout_constraintTop_toTopOf="@id/kolvoPopitok"
+        
         app:layout_constraintBottom_toBottomOf="@id/kolvoPopitok"
+        
         app:layout_constraintStart_toEndOf="@id/kolvoPopitok"
+        
         app:layout_constraintEnd_toEndOf="parent"
+        
         />
+
 
     <Button
         android:id="@+id/btnSohranit"
-        android:layout_width="match_parent"
+        
+        android:layout_width="wrap_content"
+        
         android:layout_height="wrap_content"
-        android:text="Сохранить и выйти"
+        
+        android:text="Сохранить"
+        
+        android:textSize="18sp"
+        
         android:fontFamily="monospace"
-        android:layout_marginTop="100dp"
-        android:layout_marginHorizontal="30dp"
+        
+        android:layout_marginTop="110dp"
+        
+        android:layout_marginHorizontal="25dp"
+        
         app:layout_constraintTop_toBottomOf="@id/kolvoPopitok"
+        
+        app:layout_constraintStart_toStartOf="parent"
+        
+        app:layout_constraintEnd_toEndOf="parent"
+        
         />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
